@@ -3,16 +3,6 @@ const sql = neon(process.env.DATABASE_URL!)
 
 import type { Chat, ChatWithMessages, Message } from '../types'
 
-process.on('uncaughtException', (error) => {
-  console.error('Uncaught Exception:', error)
-  process.exit(1)
-})
-
-process.on('unhandledRejection', (reason, promise) => {
-  console.error('Unhandled Rejection at:', promise, 'reason:', reason)
-  process.exit(1)
-})
-
 export async function createChat(
   userEmail: string,
   name: string,
@@ -27,13 +17,13 @@ export async function createChat(
 
     const insertMessages = msgs.map(
       (msg) =>
-        sql`INSERT INTO messages (chat_id, role, content) VALUES (${Number(
-          chatId
-        )}, ${msg.role}, ${msg.content})`
+        sql`INSERT INTO messages (chat_id, role, content) VALUES (${
+          +chatId
+        }, ${msg.role}, ${msg.content})`
     )
     await Promise.all(insertMessages)
 
-    return Number(chatId)
+    return (+chatId)
   } catch (error) {
     console.error('Error creating chat:', error)
     throw new Error('Could not create chat')
