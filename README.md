@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Table of contents
 
-## Getting Started
+- [Overview](#overview)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Screenshots
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![1](./images/landing.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![2](./images/dashboard.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+![3](./images/chat.png)
 
-## Learn More
+### Links
 
-To learn more about Next.js, take a look at the following resources:
+- Live Site URL: [chat-gpt-app](https://chat-gpt-app-eta-eight.vercel.app/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## My process
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Built with
 
-## Deploy on Vercel
+- Next.js
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- NextAuth.js
+- OpenAI API
+- PostgreSQL (Neon Database)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### What I learned
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- How to integrate OpenAI's API for generating chat completions.
+- Implementing authentication using NextAuth.js.
+- Managing state and server-side rendering with Next.js.
+- Using Tailwind CSS for styling and creating responsive designs.
+- Handling database operations with PostgreSQL and Neon Database.
+
+### Continued development
+
+In future projects, I want to continue focusing on the following areas:
+
+- Enhancing the user interface and user experience.
+- Implementing more advanced features using OpenAI's API.
+- Improving performance and scalability of the application.
+- Exploring other authentication methods and improving security.
+- Deepening my knowledge of database optimization and management.
